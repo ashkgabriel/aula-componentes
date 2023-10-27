@@ -1,1 +1,38 @@
-<p>cliente-list works!</p>
+<div class="card">
+  <div class="card-header bg-primary text-light">
+
+  </div>
+
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Endereço</th>
+          <th scope="col">Limite de Crédito</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>{{cliente.id}}</td>
+          <td>{{cliente.nome}}</td>
+          <td>{{cliente.endereco}}</td>
+          <td>{{cliente.limiteCredito | currency: 'BRL'}}</td>
+          <td>
+            <a href="#" class="btn btn-primary" title="editar">
+              <i class="fa-solid fa-edit"></i>
+            </a>
+          </td>
+          <td>
+            <a href="#" class="btn btn-danger" title="excluir">
+              <i class="fa-solid fa-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,1 +1,21 @@
-<p>produto-form works!</p>
+<div class="card">
+  <div class="card-header bg-primary text-light">
+    {{title}}
+  </div>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">ID</label>
+      <input type="text" name="id"  required minlength="3" class="form-control" #id="ngModel" [(ngModel)]="produto.id">
+
+      <label for="descricao">Descrição</label>
+      <textarea name="descricao"  required minlength="30" rows="3" class="form-control" #descricao="ngModel" [(ngModel)]="produto.descricao"></textarea>
+
+      <label for="lim-cretito">Limite de crédito</label>
+      <input type="number" name="lim-cretito" required class="form-control" #limiteCredito="ngModel" [(ngModel)]="produto.peso">
+
+      <button type="submit" class="btn btn-primary">Salvar</button>
+      <a href="" class="btn btn-secondary ml-2">Cancelar</a>
+    </div>
+  </form>
+</div>
