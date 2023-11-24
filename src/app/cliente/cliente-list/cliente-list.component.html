@@ -22,17 +22,18 @@
           <td>{{cliente.endereco}}</td>
           <td>{{cliente.limiteCredito | currency: 'BRL'}}</td>
           <td>
-            <a href="#" class="btn btn-primary" title="editar">
+            <a href="#" class="btn btn-primary" title="editar" routerLink="/clientes/editar/{{cliente.id}}">
               <i class="fa-solid fa-edit"></i>
             </a>
           </td>
           <td>
-            <a href="#" class="btn btn-danger" title="excluir">
+            <a (click)="delete(cliente)" class="btn btn-danger" title="excluir">
               <i class="fa-solid fa-trash"></i>
             </a>
           </td>
         </tr>
       </tbody>
     </table>
+    <a routerLink="/clientes/novo" class="btn btn-primary"> Novo Cliente </a>
   </div>
 </div>
